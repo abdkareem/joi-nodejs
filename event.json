@@ -1,0 +1,34 @@
+{
+  "sender": {
+    "accountNo": "12345678909876543",
+    "routingNo": "123456789",
+    "userInformation": {
+      "firstName": "Adonis",
+      "lastName": "Creed",
+      "address": {
+        "firstLine": "",
+        "secondLine": "",
+        "city": "",
+        "state": "",
+        "zipCode": ""
+      },
+      "registeredPhoneNo": "1234567890"
+    }
+  },
+  "recipient": {
+    "accountNo": "12345678909876543",
+    "routingNo": "123456789",
+    "userInformation": {
+      "firstName": "Adonis",
+      "lastName": "Creed",
+      "address": {
+        "firstLine": "",
+        "secondLine": "",
+        "city": "",
+        "state": "",
+        "zipCode": ""
+      },
+      "phoneNo": "1234567890"
+    }
+  }
+}
