@@ -1,36 +1,49 @@
 const Joi = require('joi');
 
-const schema = Joi.object.keys({
-    sender: Joi.object.keys({
-        accountNo: Joi.number().integer().min(7).max(17).required(),
-        routingNo: Joi.number().integer().min(9).max(9).required(),
-        userInformation: Joi.object.keys({
-            firstName: Joi.string().min(2).max(30).required(),
-            lastName: Joi.string().min(2).max(30).required(),
-            address: Joi.object.keys({
-                firstLine: Joi.string.alphanum().max(30).required(),
-                secondLine: Joi.string.alphanum().max(30),
-                city: Joi.string().max(20),
-                state: Joi.string().min(2).max(2).required(),
-                zipCode: Joi.number().integer().min(5).max(6).required()
+const payloadSchema = Joi.object().options({abortEarly: false}).keys({
+    sender: Joi.object().keys({
+        accountNo: Joi.string().required(),
+        routingNo: Joi.string().required(),
+        userInformation: Joi.object().keys({
+            firstName: Joi.string().required(),
+            lastName: Joi.string().required(),
+            address: Joi.object().keys({
+                firstLine: Joi.string().required(),
+                secondLine: Joi.string(),
+                city: Joi.string(),
+                state: Joi.string().required(),
+                zipCode: Joi.string().required()
             }),
-            registeredPhoneNo: Joi.number.integer().min(10).max(10).required()
+            registeredPhoneNo: Joi.string().required()
         })
     }),
-    recipient: Joi.object.keys({
-        accountNo: Joi.number().integer().min(7).max(17).required(),
-        routingNo: Joi.number().integer().min(9).max(9).required(),
-        userInformation: Joi.object.keys({
-            firstName: Joi.string().min(2).max(30).required(),
-            lastName: Joi.string().min(2).max(30).required(),
-            address: Joi.object.keys({
-                firstLine: Joi.string.alphanum().max(30).required(),
-                secondLine: Joi.string.alphanum().max(30),
-                city: Joi.string().max(20),
-                state: Joi.string().min(2).max(2).required(),
-                zipCode: Joi.number().integer().min(5).max(6).required()
+    recipient: Joi.object().keys({
+        accountNo: Joi.string().required(),
+        routingNo: Joi.string().required(),
+        userInformation: Joi.object().keys({
+            firstName: Joi.string().required(),
+            lastName: Joi.string().required(),
+            address: Joi.object().keys({
+                firstLine: Joi.string().required(),
+                secondLine: Joi.string(),
+                city: Joi.string(),
+                state: Joi.string().required(),
+                zipCode: Joi.string().required()
             }),
-            registeredPhoneNo: Joi.number.integer().min(10).max(10).required()
+            registeredPhoneNo: Joi.string().required()
         })
     })
 });
+
+module.exports = (event) => {
+
+    Joi.validate(event, payloadSchema, (err, value) => {
+        if (err) {
+            console.log('****Error encountered ', err);
+            return;
+        }
+        else {
+            console.log('****Payload validated ');
+        }
+    });
+};

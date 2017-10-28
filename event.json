@@ -6,11 +6,11 @@
       "firstName": "Adonis",
       "lastName": "Creed",
       "address": {
-        "firstLine": "",
-        "secondLine": "",
-        "city": "",
-        "state": "",
-        "zipCode": ""
+        "firstLine": "Linda Terrace",
+        "secondLine": "Nova Albion Way",
+        "city": "San Rafael",
+        "state": "CA",
+        "zipCode": "12345"
       },
       "registeredPhoneNo": "1234567890"
     }
@@ -22,13 +22,13 @@
       "firstName": "Adonis",
       "lastName": "Creed",
       "address": {
-        "firstLine": "",
-        "secondLine": "",
-        "city": "",
-        "state": "",
-        "zipCode": ""
+        "firstLine": "Linda Terrace",
+        "secondLine": "Nova Albion Way",
+        "city": "San Rafael",
+        "state": "CA",
+        "zipCode": "12345"
       },
-      "phoneNo": "1234567890"
+      "registeredPhoneNo": "1234567890"
     }
   }
 }
