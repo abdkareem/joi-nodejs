@@ -4,3 +4,5 @@ Using Joi, an object schema validation library for validating payloads that are 
 
 To run the project: 
 Perform `$ npm install` and then `$ node validation/index.js`
+
+[Joi NPM documentation] (https://www.npmjs.com/package/joi)
