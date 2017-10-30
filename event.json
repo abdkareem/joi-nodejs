@@ -1,7 +1,7 @@
 {
   "sender": {
     "accountNo": "12345678909876543",
-    "routingNo": "123456789",
+    "routingNo": 123456789,
     "userInformation": {
       "firstName": "Adonis",
       "lastName": "Creed",

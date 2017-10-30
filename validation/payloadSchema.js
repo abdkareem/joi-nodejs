@@ -35,15 +35,23 @@ const payloadSchema = Joi.object().options({abortEarly: false}).keys({
     })
 });
 
-module.exports = (event) => {
-
+module.exports = (event, callback) => {
+    /*
     Joi.validate(event, payloadSchema, (err, value) => {
         if (err) {
             console.log('****Error encountered ', err);
-            return;
+            //return callback(null, err);
         }
         else {
-            console.log('****Payload validated ');
+            console.log('****Payload validated ', value);
+            //return callback(null, value);
         }
     });
+    */
+
+    let err = Joi.validate(event, payloadSchema).error
+    if (err) {
+        console.log('an error occured validating the request payload');
+    }
+
 };
