@@ -1,32 +1,32 @@
 {
   "sender": {
-    "accountNo": "12345678909876543",
-    "routingNo": "123456789",
+    "accountNo": 12345678909876543,
+    "routingNo": "",
     "userInformation": {
       "firstName": "Adonis",
-      "lastName": "Creed",
+      "lastName": "",
       "address": {
         "firstLine": "Linda Terrace",
-        "secondLine": "Nova Albion Way",
+        "secondLine": "",
         "city": "San Rafael",
         "state": "CA",
-        "zipCode": "12345"
+        "zipCode": 12345
       },
-      "registeredPhoneNo": "1234567890"
+      "registeredPhoneNo": 1234567890
     }
   },
   "recipient": {
     "accountNo": "12345678909876543",
     "routingNo": "123456789",
     "userInformation": {
-      "firstName": "Adonis",
+      "firstName": "",
       "lastName": "Creed",
       "address": {
         "firstLine": "Linda Terrace",
         "secondLine": "Nova Albion Way",
         "city": "San Rafael",
         "state": "CA",
-        "zipCode": "12345"
+        "zipCode": ""
       },
       "registeredPhoneNo": "1234567890"
     }
